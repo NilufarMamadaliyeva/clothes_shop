@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for summerclothes in clothes %}
+    <a href="{% url 'about-cloth' summerclothes.pk %}">
+    <img style="width:300px; height:400px;" src="{{ summerclothes.image_cloth.url }}" alt="{{summerclothes.image_cloth}} image">
+    <h4>{{ summerclothes.name }}</h4>
+    </a>
+    <br><hr>
+    {% endfor %}
+
+{% endblock %}
+

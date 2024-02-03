@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Summer Clothes detail {% endblock title %}
+{% block content %}
+<h2>Landing page</h2>
+    <img style="width:400px; height:500px;" src="{{ summer_clothes.image_cloth.url }}"><br>
+    {{ cloth.name}}<br>
+    {{ cloth.isbn }}<br>
+    {{ cloth.price }}<br>
+    {{ cloth.brand }}<br>
+    {{ cloth.description }}<br>
+    {{ cloth.create_at }}<br>
+<a href="{% url 'clothes' %}">Summer clothes</a>
+
+{% endblock content %}
